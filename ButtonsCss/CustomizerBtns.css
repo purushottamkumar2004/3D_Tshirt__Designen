@@ -1,0 +1,428 @@
+.Btn {
+    width: 37px;
+    height: 37px;
+    border: none;
+    border-radius: 50%;
+    background-color:#3b82f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+  }
+  
+  .svgIcon {
+    fill: white;
+  }
+  
+  .icon2 {
+    width: 15px;
+    height: 4px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+  }
+  
+ 
+  
+  .Btn:hover {
+    opacity: 1;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover {
+    background: radial-gradient( #ea580c,#dc2626);
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .icon2 {
+    border-bottom: 2px solid rgb(235, 235, 235);
+    border-left: 2px solid rgb(235, 235, 235);
+    border-right: 2px solid rgb(235, 235, 235);
+  }
+  
+  .Btn:hover .svgIcon {
+    fill: rgb(255, 255, 255);
+    animation: slide-in-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  body.dark-mode {
+    background-color: #222;
+    color: #ffffff;
+  }
+
+
+  /* The switch - the box around the slider */
+.ts-container {
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+  }
+  
+  /* Hide default HTML checkbox */
+  .ts-container input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .ts-container .slider {
+    --background: linear-gradient(to right, #090613ef, #18151f);
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--background);
+    transition: background-color 0.5s;
+    border-radius: 30px;
+  }
+  
+  .ts-container .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 15px -4px 0px 15px #f8ea27;
+    background: var(--background);
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  .ts-container input:checked + .slider {
+    background-color: #333;
+  }
+  
+  .ts-container input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 8px -4px 0px 0px #f8f8f4;
+  }
+  
+
+  @keyframes floating {
+    0%, 100% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  @keyframes particlesbtn {
+    0% {
+      transform: translateZ(0, 0);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translate(190px, 50px);
+      opacity: 0;
+    }
+  }
+  
+  .start-btn {
+    position: relative;
+    background: linear-gradient(to right, #ea580c, #fb923c);
+    display: inline-block;
+    background-size: 200% auto;
+    border: 1px solid;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    animation: floating 3s ease-in-out infinite;
+    transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .start-btn::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px #FF7730;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    width: 5px;
+    height: 5px;
+    background: #FF7730;
+    animation: particlesbtn 2s infinite;
+  }
+  
+  .start-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .start-btn:hover {
+    color: #c2410c;
+    font-weight: 800;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+    background-position: right center;
+    background: linear-gradient(to right, #FFB900, #FF7730);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  .gb-btn {
+    /* font-family: monospace; */
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 80px;
+    height: 37px;
+    transition: .3s;
+  }
+  
+  .gb-btn:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+  }
+  
+  .bookmarkBtn {
+    width: 60px;
+    height: 37px;
+    border-radius: 10px;
+    /* border: 1px solid rgba(255, 255, 255, 0.349); */
+    background-color: #3b82f6;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+  }
+  
+  .IconContainer {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient( #fc7c38,#dc2626);
+    border-radius: 10px;
+    display: flex;
+    /* border: #1d4ed8 1px solid; */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: .3s;
+  }
+  
+  .icon {
+    border-radius: 1px;
+    
+  }
+  
+  .text {
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+    transition-duration: .3s;
+    font-size: 1.04em;
+  }
+  
+  .bookmarkBtn:hover .IconContainer {
+    width: 60px;
+    margin: 0px;
+    height: 37px;
+    border-radius: 10px;
+    transition-duration: .3s;
+  }
+  
+  .bookmarkBtn:hover .text {
+    transform: translate(10px);
+    width: 0;
+    font-size: 0;
+    transition-duration: .3s;
+  }
+  
+  .bookmarkBtn:active {
+    transform: scale(0.95);
+    transition-duration: .3s;
+  }
+
+
+
+  .refresh-btn:hover{
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .move-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 30px;
+    border: 1px solid #8F9092;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 600;
+    color: #606060;
+    text-shadow: 0 1px #fff;
+  }
+  /* No hover shadow in Dark Mode */
+  .dark-mode .move-btn:hover {
+    box-shadow: none;
+    border: orange 2px solid;
+  }
+  
+  .move-btn:hover {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+  }
+  
+  .move-btn:active {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  }
+  
+  /* .move-btn:focus {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  } */
+  
+  
+  
+  .scl-btn {
+    --btn-color: #3b82f6;
+    position: relative;
+    padding: 16px 32px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    filter: drop-shadow(0 2px 8px rgba(39, 94, 254, 0.32));
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  .scl-btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: var(--btn-color);
+    border-radius: 24px;
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  .scl-btn span,
+          .scl-btn span span {
+    display: inline-flex;
+    vertical-align: middle;
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  .scl-btn span {
+    transition-delay: 0.05s;
+  }
+  
+  .scl-btn span:first-child {
+    padding-right: 7px;
+  }
+  
+  .scl-btn span span {
+    margin-left: 8px;
+    transition-delay: 0.1s;
+  }
+  
+  .scl-btn ul {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    transform: translateY(-50%);
+  }
+  
+  .scl-btn ul li {
+    flex: 1;
+  }
+  
+  .scl-btn ul li a {
+    display: inline-flex;
+    vertical-align: middle;
+    transform: translateY(55px);
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  .scl-btn ul li a:hover {
+    opacity: 0.5;
+  }
+  
+  .scl-btn:hover::before {
+    transform: scale(1.2);
+  }
+  
+  .scl-btn:hover span,
+          .scl-btn:hover span span {
+    transform: translateY(-55px);
+  }
+  
+  .scl-btn:hover ul li a {
+    transform: translateY(0);
+  }
+  
+  .scl-btn:hover ul li:nth-child(1) a {
+    transition-delay: 0.15s;
+  }
+  
+  .scl-btn:hover ul li:nth-child(2) a {
+    transition-delay: 0.2s;
+  }
+  
+  .scl-btn:hover ul li:nth-child(3) a {
+    transition-delay: 0.25s;
+  }
